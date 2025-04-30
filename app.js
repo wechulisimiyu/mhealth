@@ -9,7 +9,7 @@ const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
 const methodOverride = require("method-override");
 const helmet = require("helmet");
-const mongoSanitize = require("express-mongo-sanitize");
+// const mongoSanitize = require("express-mongo-sanitize");
 const flash = require("connect-flash");
 const navigationRoutes = require("./src/routes/homeRoutes");
 const formRoutes = require("./src/routes/formRoutes");
@@ -56,7 +56,7 @@ app.use(
     },
   })
 );
-app.use(mongoSanitize());
+// app.use(mongoSanitize());
 
 /**
  * Generate an OAuth 2.0 access token for authenticating with PayPal REST APIs.
